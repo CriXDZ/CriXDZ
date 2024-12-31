@@ -43,3 +43,11 @@ Soy un **apasionado por la tecnología** que ama **aprender**, **programar** y *
 </p>
 
 ---
+
+<p align="center">
+  <b>Creado por:</b><br>
+  <a href="https://github.com/CriXDZ">
+    <img src="https://avatars.githubusercontent.com/CriXDZ" width="100" alt="CriXDZ"><br>
+    <strong>CriXDZ</strong>
+  </a>
+</p>
