@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 46" width="200" height="46">
+  <defs>
+    <style>
+      /* --- PALETA CIBERPUNK NEÓN --- */
+      :root {
+        --glow-yellow: #fcee0a;
+        --glow-cyan: #00f0ff;
+        --glow-red: #ff0055;
+      }
+
+      /* 1. Prompt: Neón Amarillo Suave Independiente */
+      .prompt {
+        font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 32px;
+        font-weight: 800;
+        fill: var(--glow-yellow);
+        filter: drop-shadow(0 0 1.5px rgba(254, 238, 10, 0.9))
+                drop-shadow(0 0 5px rgba(254, 238, 10, 0.35));
+      }
+
+      /* 2. Nombre: Neón Azul/Cian Suave + Glitch Moderado */
+      @keyframes cyberGlitch {
+        0%, 82%, 100% {
+          transform: translate(0);
+          filter: drop-shadow(0 0 1.5px rgba(0, 240, 255, 0.9))
+                  drop-shadow(0 0 6px rgba(0, 240, 255, 0.35));
+        }
+        83% {
+          transform: translate(-2px, 1px) skewX(-2.5deg);
+          filter: drop-shadow(-2px 0 0 #ff0055) drop-shadow(2px 0 0 #00f0ff);
+        }
+        85% {
+          transform: translate(2px, -1px) skewX(2deg);
+          filter: drop-shadow(2px 0 0 #ff0055) drop-shadow(-2px 0 0 #fcee0a);
+        }
+        87% {
+          transform: translate(-1px, 1px);
+          filter: drop-shadow(-1.5px 0 0 #00f0ff);
+        }
+        89% {
+          transform: translate(0);
+          filter: drop-shadow(0 0 1.5px rgba(0, 240, 255, 0.9))
+                  drop-shadow(0 0 6px rgba(0, 240, 255, 0.35));
+        }
+        92% {
+          transform: translate(1px, -1px) skewX(1deg);
+          filter: drop-shadow(1.5px 0 0 #ff0055);
+        }
+        94%, 100% {
+          transform: translate(0);
+        }
+      }
+
+      .cyber-name {
+        font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 34px;
+        font-weight: 800;
+        fill: var(--glow-cyan);
+        animation: cyberGlitch 4s infinite ease-in-out;
+      }
+
+      /* 3. Cursor: Neón Rojo/Magenta Delgado y Parpadeo Limpio */
+      @keyframes cursorBlink {
+        0%, 48% {
+          opacity: 1;
+          filter: drop-shadow(0 0 1.5px rgba(255, 0, 85, 0.9))
+                  drop-shadow(0 0 5px rgba(255, 0, 85, 0.45));
+        }
+        50%, 100% {
+          opacity: 0;
+          filter: none;
+        }
+      }
+
+      .cursor-bar {
+        fill: var(--glow-red);
+        animation: cursorBlink 0.9s infinite step-start;
+      }
+    </style>
+  </defs>
+
+  <!-- Capa 1: Símbolo Prompt '>' (Amarillo) -->
+  <text x="0" y="34" class="prompt">&gt;</text>
+
+  <!-- Capa 2: Nombre 'CriXDZ' (Azul Neón + Glitch) -->
+  <text x="28" y="34" class="cyber-name">CriXDZ</text>
+
+  <!-- Capa 3: Cursor Delgado 'I' (Rojo Neón con Parpadeo Sincronizado) -->
+  <rect x="156" y="11" width="2" height="23" rx="1" class="cursor-bar" />
+</svg>

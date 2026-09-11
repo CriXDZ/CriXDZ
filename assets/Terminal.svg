@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <style>
+      /* --- ANIMACIONES DE NEÓN VERDE Y CURSOR --- */
+      @keyframes greenNeonPulse {
+        0%, 100% {
+          filter: drop-shadow(0 0 2px #00ff88) drop-shadow(0 0 8px rgba(0, 255, 136, 0.35));
+          opacity: 0.9;
+        }
+        50% {
+          filter: drop-shadow(0 0 3.5px #00ff88) drop-shadow(0 0 14px rgba(0, 255, 136, 0.65));
+          opacity: 1;
+        }
+      }
+
+      @keyframes cursorBlink {
+        0%, 48% { opacity: 1; filter: drop-shadow(0 0 3px #00ff88); }
+        50%, 100% { opacity: 0; filter: none; }
+      }
+
+      @keyframes windowGlow {
+        0%, 100% { stroke: rgba(0, 255, 136, 0.2); }
+        50% { stroke: rgba(0, 255, 136, 0.5); }
+      }
+
+      .window-bg {
+        fill: #090d16;
+        stroke-width: 1.5;
+        animation: windowGlow 3s infinite ease-in-out;
+      }
+
+      .window-bar {
+        fill: #0d1522;
+      }
+
+      .neon-green {
+        fill: none;
+        stroke: #00ff88;
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: greenNeonPulse 2.8s infinite ease-in-out;
+      }
+
+      .terminal-cursor {
+        fill: #00ff88;
+        animation: cursorBlink 1s infinite step-start;
+      }
+
+      .code-line {
+        fill: none;
+        stroke: #162a22;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+
+      .dot-red { fill: #ef4444; opacity: 0.75; }
+      .dot-yellow { fill: #f59e0b; opacity: 0.75; }
+      .dot-green { fill: #10b981; filter: drop-shadow(0 0 2px #10b981); }
+    </style>
+  </defs>
+
+  <!-- Ventana de Terminal (Chasis Oscuro con Bordes Suaves) -->
+  <rect x="12" y="12" width="136" height="136" rx="16" class="window-bg" />
+
+  <!-- Barra Superior de la Ventana -->
+  <path d="M 12 28 Q 12 12 28 12 L 132 12 Q 148 12 148 28 L 148 38 L 12 38 Z" class="window-bar" />
+  <line x1="12" y1="38" x2="148" y2="38" stroke="#162235" stroke-width="1" />
+
+  <!-- Botones de la Ventana (Unix / macOS dots) -->
+  <circle cx="26" cy="25" r="3.5" class="dot-red" />
+  <circle cx="37" cy="25" r="3.5" class="dot-yellow" />
+  <circle cx="48" cy="25" r="3.5" class="dot-green" />
+
+  <!-- Prompt Chevron '>' en Neón Verde Suave -->
+  <path d="M 32 64 L 54 80 L 32 96" class="neon-green" />
+
+  <!-- Cursor en Bloque '█' Parpadeante con Neón Sincronizado -->
+  <rect x="66" y="66" width="9" height="28" rx="2" class="terminal-cursor" />
+
+  <!-- Líneas sutiles de salida de código de fondo -->
+  <line x1="32" y1="114" x2="88" y2="114" class="code-line" />
+  <line x1="32" y1="124" x2="68" y2="124" class="code-line" />
+</svg>
